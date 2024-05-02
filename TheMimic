@@ -1,0 +1,46 @@
+--더미믹 북2 챕2 
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "강도심", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+
+--변수들
+local TweenService = game:GetService("TweenService")
+local Player = game.Players.LocalPlayer
+local Character = Player.Character
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
+
+--메인 탭
+local MainTab = Window:MakeTab({
+	Name = "Tab 1",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+game:GetService("HttpService")
+
+MainTab:AddButton({
+	Name = "Auto Win",
+	Callback = function()
+        local t1 = TweenService:Create(HumanoidRootPart, TweenInfo.new(2), {CFrame = CFrame.new(259.5, 57.1138611, -66.891983, 1, -0, 0, 0, 0.999976754, 0.00681940094, -0, -0.00681940094, 0.999976754)}):Play()
+        task.wait(3)
+        local t2 = TweenService:Create(HumanoidRootPart, TweenInfo.new(2), {CFrame = CFrame.new(-539.382019, 84.8812408, -88.504715, 1, 0, 0, 0, 1, 0, 0, 0, 1)}):Play()
+        task.wait(20)
+        local t3 = TweenService:Create(HumanoidRootPart, TweenInfo.new(2), {CFrame = CFrame.new(-3183.44141, 594.520569, 889.04657, -1, 0, 0, 0, 1, 0, 0, 0, -1)}):Play()
+        task.wait(3)
+        local t4 = TweenService:Create(HumanoidRootPart, TweenInfo.new(2), {CFrame = CFrame.new(-3612.61841, 614.994934, 847.404541, 0, 0, -1, 0, 1, 0, 1, 0, 0)}):Play()
+        task.wait(3)
+        local t5 = TweenService:Create(HumanoidRootPart, TweenInfo.new(2), {CFrame = CFrame.new(-4365.54297, 711.371826, 1160.37939, -4.37113883e-08, 0, 1, 0, 1, 0, -1, 0, -4.37113883e-08)}):Play()
+        task.wait(3)
+        local t6 = TweenService:Create(HumanoidRootPart, TweenInfo.new(2), {CFrame = CFrame.new(-4439.74756, 711.371826, 1164.66687, -8.78176422e-07, 9.68991287e-09, 1, -1.93113125e-09, 1, -9.68991376e-09, -1, -1.93113969e-09, -8.78176422e-07)}):Play()
+        task.wait(3)
+        local workspaceDe = workspace:GetDescendants()
+
+
+        for i,v in ipairs(workspaceDe) do
+            if v:IsA("ProximityPrompt") and v.Parent.Name == "RootPart" and v.Parent.Parent.Name == "NoppeNPC" then
+                print("Hi")
+                fireproximityprompt(v)
+            end
+        end
+   	end    
+})
